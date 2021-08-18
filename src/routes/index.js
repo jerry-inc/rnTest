@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Platform} from 'react-native';
+import {View, Platform, Linking, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -12,10 +12,19 @@ import WorldScreen from '../screens/WorldScreen';
 const Navigation = (props): React.FC => {
   const Tab = createBottomTabNavigator();
   const Stack = createNativeStackNavigator();
+  const linking = {
+    prefixes: ['rntest://'],
+    config: {
+      screens: {
+        Hello: 'hello',
+        World: 'world',
+      },
+    },
+  };
 
   return (
     <SafeAreaProvider>
-      <NavigationContainer>
+      <NavigationContainer linking={linking} fallback={<Text>Loading...</Text>}>
         <Tab.Navigator
           screenOptions={{
             tabBarActiveTintColor: Theme.tab_active_color,
