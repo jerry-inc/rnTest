@@ -12,10 +12,10 @@ const style = StyleSheet.create({
     paddingLeft: 25,
     paddingRight: 25,
   },
-  textContainer: {paddingTop: '35%'},
+  textContainer: {paddingTop: '60%'},
   bigText: {
     color: Theme.primary_text_color,
-    fontSize: 52,
+    fontSize: 60,
   },
   text: {
     color: Theme.primary_text_color,

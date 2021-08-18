@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, Platform} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -21,7 +21,10 @@ const Navigation = (props): React.FC => {
             tabBarActiveTintColor: Theme.tab_active_color,
             tabBarInactiveTintColor: Theme.tab_inactive_color,
             headerShown: false,
-            tabBarLabelStyle: {fontSize: 15, paddingBottom: 15},
+            tabBarLabelStyle: {
+              fontSize: 15,
+              paddingBottom: Platform.OS === 'android' ? 15 : 0,
+            },
             tabBarStyle: {height: Theme.tab_height},
           }}>
           <Tab.Screen
@@ -29,7 +32,8 @@ const Navigation = (props): React.FC => {
             options={{
               tabBarLabel: '首页',
               tabBarIcon: ({focused, color, size}) => (
-                <View style={{marginBottom: -15}}>
+                <View
+                  style={{marginBottom: Platform.OS === 'android' ? -15 : 0}}>
                   <Icon
                     name={focused ? 'home' : 'home-inactive'}
                     height={20}
@@ -46,7 +50,8 @@ const Navigation = (props): React.FC => {
               tabBarLabel: '通知',
 
               tabBarIcon: ({focused, color, size}) => (
-                <View style={{marginBottom: -15}}>
+                <View
+                  style={{marginBottom: Platform.OS === 'android' ? -15 : 0}}>
                   <Icon
                     name={focused ? 'bell' : 'bell-inactive'}
                     height={20}
