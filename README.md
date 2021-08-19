@@ -12,7 +12,17 @@ For android
 
 For ios
 
+Go to projects ios directory and run
+
+### `pod install`
+
+then to start project
+
 ### `npx react-native run-ios`
+
+If project does not start with above command, then:
+
+open project in Xcode, and select IOS device then click Play button to Build and Start
 
 ---------------------------------
 
