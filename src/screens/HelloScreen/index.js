@@ -3,17 +3,12 @@ import {View, Text, StatusBar, ImageBackground, Platform} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import style from './style';
 import Theme from '../../assets/style/App.style';
-import Layout from '../../components/layout';
 
 type Props = {};
 
 const HelloScreen = (props: Props): React.FC => {
   return (
-    <SafeAreaView
-      style={{
-        flex: 1,
-        justifyContent: 'space-between',
-      }}>
+    <>
       <StatusBar translucent backgroundColor="transparent" />
       <View style={style.container}>
         <ImageBackground
@@ -28,7 +23,7 @@ const HelloScreen = (props: Props): React.FC => {
           </View>
         </ImageBackground>
       </View>
-    </SafeAreaView>
+    </>
   );
 };
 
