@@ -39,5 +39,7 @@ This page has two links, for each App page. Press "Launch Hello page" to test De
 # Furthermore
 
 APP UI should be uniform in both IOS and Android
+
 Deep Links work on IOS and Android
+
 Wechat browsser does not open Deep Link
