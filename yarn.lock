@@ -4931,6 +4931,11 @@ open@^6.2.0:
   dependencies:
     is-wsl "^1.1.0"
 
+openinstall-react-native@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/openinstall-react-native/-/openinstall-react-native-1.4.3.tgz#ff09a9841e48ab5f21b6ce4d5473277dd091c732"
+  integrity sha512-1d18M4hFrIGbfY/Fs7PsW+Br8iqgANBo6IGqJMBJ91W8xz4Fr0ZB+ZbuS0EZA4w9exOs3JbW/BKs+jcSH4kmQw==
+
 optionator@^0.8.1:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/optionator/-/optionator-0.8.3.tgz#84fa1d036fe9d3c7e21d99884b601167ec8fb495"

@@ -8,8 +8,23 @@ import Icon from '../components/icons';
 import Theme from '../assets/style/App.style';
 import HelloScreen from '../screens/HelloScreen';
 import WorldScreen from '../screens/WorldScreen';
+//import OpeninstallModule from 'openinstall-react-native';
 
 const Navigation = (props): React.FC => {
+  // React.useEffect(() => {
+  //   //OpeninstallModule.init();
+  //   const receiveWakeupListener = map => {
+  //     if (map) {
+  //       //do your work here
+  //     }
+  //     Alert.alert('wake parameters', JSON.stringify(map));
+  //   };
+  //   OpeninstallModule.addWakeUpListener(receiveWakeupListener);
+  //   return () => {
+  //     OpeninstallModule.removeWakeUpListener(receiveWakeupListener);
+  //   };
+  // }, []);
+
   const Tab = createBottomTabNavigator();
   const Stack = createNativeStackNavigator();
   const linking = {
